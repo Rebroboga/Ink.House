@@ -31,6 +31,7 @@ body {
   overflow-x: hidden;
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
+  color: $text;
 }
 
 .container {
@@ -60,6 +61,7 @@ body {
   background-color: transparent;
   color: $border;
   padding: 5px;
+  cursor: pointer;
 }
 
 .paragraph {
@@ -222,6 +224,7 @@ body {
 
 @media (min-width: 510px) {
   .hero {
+    padding-bottom: 50px;
     &__inner {
       display: flex;
       justify-content: space-between;
@@ -257,6 +260,7 @@ body {
 
 @media (min-width: 690px) {
   .hero {
+    padding-bottom: 70px;
     &__right {
       padding-top: 35px;
       min-width: 330px;
@@ -308,4 +312,136 @@ body {
       width: 52%;
     }
   }
+}
+
+.reproduction {
+  &__caption {
+    margin: 0;
+    font-size: 24px;
+    line-height: 110%;
+    font-weight: 500;
+    color: $text;
+    margin-bottom: 20px;
+  }
+  &__group {
+    overflow-x: scroll;
+    white-space: nowrap;
+    margin-bottom: 20px;
+  }
+  &__btn {
+    border-radius: 20px;
+    padding: 10px 20px;
+    min-width: 118px;
+    font-size: 18px;
+    line-height: 21.13px;
+    height: 41px;
+    background-color: $button;
+    color: $text;
+    border: none;
+  }
+  &__btn:not(:last-child) {
+    margin-right: 20px;
+  }
+  &__card {
+    background-color: $accent;
+    padding: 20px 20px 30px 20px;
+    margin-bottom: 30px;
+  }
+  &__image {
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  &__author {
+    color: $author;
+    font-size: 16px;
+    line-height: 110%;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  &__name {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 28.18px;
+    font-weight: 500;
+  }
+  &__material {
+    font-size: 16px;
+    line-height: 110%;
+    margin-bottom: 30px;
+    font-weight: 500;
+  }
+  &__price {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23.48px;
+    color: $price;
+    margin-bottom: 10px;
+    font-family: 'Raleway';
+  }
+  &__button-cart {
+    font-size: 18px;
+    line-height: 21.13px;
+    color: $price;
+    width: 100%;
+    padding: 5px;
+    height: 50px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 510px) {
+  .reproduction {
+    &__btn {
+      min-width: 100px;
+    }
+    &__btn:not(:last-child) {
+      margin-right: 32px;
+    }
+    &__group {
+      overflow-x: hidden;
+    }
+  }
+}
+
+@media (min-width: 690px) {
+  .reproduction {
+    &__title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    &__group {
+      margin: 0;
+    }
+    &__caption {
+      margin: 0 20px 0 0;
+      font-size: 30px;
+    }
+    &__btn {
+      font-size: 20px;
+      line-height: 23.48px;
+    }
+    &__btn:not(:last-child) {
+      margin-right: 34px;
+      height: 43px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .reproduction {
+    &__caption {
+      font-size: 40px;
+    }
+    &__btn:not(:last-child) {
+      margin-right: 31px;
+    }
+  }
+}
+
+.btn-active {
+  background-color: $button-active;
+  color: #F4F6F5;
 }

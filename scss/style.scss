@@ -347,9 +347,11 @@ body {
     padding: 20px 20px 30px 20px;
     margin-bottom: 30px;
   }
+  &__group-image {
+    text-align: center;
+  }
   &__image {
     margin-bottom: 12px;
-    text-align: center;
   }
   &__author {
     color: $author;
@@ -388,6 +390,9 @@ body {
     height: 50px;
     text-align: center;
   }
+  &__margin {
+    display: none;
+  }
 }
 
 @media (min-width: 510px) {
@@ -401,6 +406,27 @@ body {
     &__group {
       overflow-x: hidden;
     }
+    &__group-card {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &__card:nth-child(2n - 1) {
+      margin-right: 5px;
+    }
+    &__image {
+      width: 200px;
+      height: 250px;
+    }
+    &__margin {
+      display: inline;
+    }
+    &__name {
+      margin-bottom: 12px;
+    }
+  }
+  .material-margin {
+    margin-bottom: 12px;
   }
 }
 
@@ -426,6 +452,45 @@ body {
     &__btn:not(:last-child) {
       margin-right: 34px;
       height: 43px;
+    }
+    &__image {
+      width: 290px;
+      height: 422px;
+      margin-bottom: 20px;
+    }
+    &__name {
+      font-size: 30px;
+    }
+    &__author {
+      font-size: 18px;
+      line-height: 21.13px;
+    }
+    &__material {
+      font-size: 18px;
+      line-height: 21.13px;
+    }
+    &__price {
+      font-size: 24px;
+      margin-bottom: 22px;
+    }
+    &__button-cart {
+      height: 65px;
+      font-size: 20px;
+      line-height: 23.48px;
+    }
+    &__margin {
+      display: none;
+    }
+  }
+  .material-margin {
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: 960px) {
+  .reproduction {
+    &__card {
+      min-width: 420px;
     }
   }
 }
